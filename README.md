@@ -1,4 +1,6 @@
-# Marie Curie Frontend Task
+# Marie Curie Frontend 
+
+View the [hosted project](https://duncan-s-white.github.io/little-loft/)
 
 ## Installation
 
