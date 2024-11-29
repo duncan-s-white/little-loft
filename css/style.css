@@ -132,24 +132,24 @@ header.hero .hero__text-container p {
   }
 }
 
-section.info .info__content-container__image-left {
+section.info .info__content-container--image-left {
   display: flex;
   max-width: 900px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  section.info .info__content-container__image-left {
+  section.info .info__content-container--image-left {
     flex-direction: column-reverse;
     max-width: 480px;
   }
 }
-section.info .info__content-container__image-right {
+section.info .info__content-container--image-right {
   display: flex;
   max-width: 900px;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
-  section.info .info__content-container__image-right {
+  section.info .info__content-container--image-right {
     flex-direction: column;
     max-width: 480px;
   }

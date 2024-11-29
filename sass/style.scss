@@ -52,6 +52,7 @@ body {
   @media (max-width: $layout-breakpoint-large) {
     width: clamp(320px, 220px + 20vw, $max-width);
   }
+
   @media (max-width: $layout-breakpoint-medium) {
     width: clamp(280px, 200px + 15vw, $max-width);
     display: block;
@@ -94,9 +95,11 @@ h4 {
   0% {
     transform: scale(1, 1);
   }
+
   50% {
     transform: scale(1.03, 1.03);
   }
+
   100% {
     transform: scale(1, 1);
   }
@@ -104,9 +107,11 @@ h4 {
 
 .store-buttons {
   display: flex;
+
   @media (max-width: $layout-breakpoint-medium) {
     justify-content: center;
   }
+
   @media (min-width: $layout-breakpoint-medium) {
     padding-top: 1em;
   }
@@ -126,16 +131,15 @@ h4 {
 
 header.hero {
   padding-top: 2em;
-  background: linear-gradient(
-    rgba(251, 248, 233, 1) 0%,
-    rgba(251, 248, 233, 1) 80%,
-    rgba(255, 255, 255, 0) 80%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(rgba(251, 248, 233, 1) 0%,
+      rgba(251, 248, 233, 1) 80%,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0) 100%);
 
   h1 {
     display: block;
     margin: 0;
+
     img {
       margin: 0 auto;
       display: block;
@@ -169,21 +173,25 @@ header.hero {
 }
 
 section.info {
-  .info__content-container__image-left {
+  .info__content-container--image-left {
     @include content-container($narrow-content-width, column-reverse);
   }
-  .info__content-container__image-right {
+
+  .info__content-container--image-right {
     @include content-container($narrow-content-width, column);
   }
+
   .info__image-container {
     position: relative;
     flex-grow: 4;
   }
+
   .info__text-container {
     justify-content: center;
     flex-grow: 5;
     padding: 0 2em;
     @include text-container;
+
     @media (max-width: $layout-breakpoint-medium) {
       padding: 3em 2em 0 2em;
     }
@@ -197,22 +205,27 @@ section.info {
 section.our-story {
   padding: 7em 0;
   background-color: $our-story-bg-color;
+
   .our-story__text-container,
   .our-story__image-container {
     padding-left: 1em;
     padding-right: 1em;
   }
+
   .our-story__content-container {
     @include content-container($large-content-width, column);
   }
+
   .our-story__text-container {
     justify-content: center;
     padding-right: 5em;
     @include text-container;
   }
+
   .our-story__image-container img {
     @include image-container-img(570px);
   }
+
   @media (max-width: $layout-breakpoint-medium) {
     padding: 2em 0 4em 0;
   }
@@ -221,22 +234,27 @@ section.our-story {
 section.stay-in-touch {
   padding: 5em 0 8em 0;
   background-color: $stay-in-touch-bg-color;
+
   .stay-in-touch__text-container,
   .stay-in-touch__image-container {
     padding-left: 1em;
     padding-right: 1em;
   }
+
   .stay-in-touch__content-container {
     @include content-container($narrow-content-width, column-reverse);
   }
+
   .stay-in-touch__image-container img {
     width: clamp(200px, 150px + 10vw, 307px);
   }
+
   .stay-in-touch__text-container {
     justify-content: end;
     padding-left: 5em;
     @include text-container;
   }
+
   input {
     font-family: $primary-font;
     color: #333;
@@ -249,6 +267,7 @@ section.stay-in-touch {
     border-radius: 24px;
     margin: 0 2em 2em 0;
   }
+
   button {
     @include button-pulse;
     cursor: pointer;
@@ -262,8 +281,10 @@ section.stay-in-touch {
     border: 1px solid $footer-bg-color;
     border-radius: 24px;
   }
+
   @media (max-width: $layout-breakpoint-medium) {
     padding: 2em;
+
     img {
       display: block;
       margin: 0 auto;
@@ -278,10 +299,13 @@ footer.footer {
   align-items: center;
   padding: 6em 0;
   text-align: center;
+
   h2 {
     color: #fff;
   }
+
   background-color: $footer-bg-color;
+
   .footer__info {
     display: flex;
     justify-content: space-around;
@@ -295,6 +319,7 @@ footer.footer {
       flex-direction: column;
     }
   }
+
   .footer__copyright {
     display: flex;
     align-items: center;
@@ -302,11 +327,13 @@ footer.footer {
     font-weight: 400;
     line-height: 22px;
     text-align: left;
+
     @media (max-width: $layout-breakpoint-small) {
       justify-content: center;
       padding-bottom: 1em;
     }
   }
+
   .footer__socials img {
     padding: 0 0.2em;
   }
