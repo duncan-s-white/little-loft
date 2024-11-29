@@ -5,11 +5,15 @@ $layout-breakpoint-small: 520px;
 $narrow-content-width: 900px;
 $large-content-width: $layout-breakpoint-large;
 
-$black-rich: #1f1f1f;
+$our-story-bg-color: #fbf8e9;
+$stay-in-touch-bg-color: #f7efb4;
+$footer-bg-color: #1f1f1f;
+
+$primary-font: Montserrat;
 
 html,
 body {
-  font-family: Montserrat;
+  font-family: $primary-font;
   padding: 0;
   margin: 0;
 }
@@ -55,7 +59,36 @@ body {
   }
 }
 
-/* Play Store App store buttons */
+@mixin button-pulse {
+  &:hover {
+    animation: pulse 1s linear infinite;
+  }
+}
+
+/* Titles */
+
+h2 {
+  color: #1f1f1f;
+  font-size: clamp(30px, 20px + 2vw, 50px);
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.0385em;
+  margin: 0;
+
+  @media (max-width: $layout-breakpoint-medium) {
+    line-height: 33px;
+    letter-spacing: -0.0285em;
+  }
+}
+
+h4 {
+  font-size: clamp(14px, 10px + 1vw, 18px);
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+}
+
+/* Play Store App store buttons - with animation */
 
 @keyframes pulse {
   0% {
@@ -71,7 +104,6 @@ body {
 
 .store-buttons {
   display: flex;
-
   @media (max-width: $layout-breakpoint-medium) {
     justify-content: center;
   }
@@ -80,15 +112,13 @@ body {
   }
 
   a {
+    @include button-pulse;
     border: 0;
     margin: 1em;
 
     img {
       width: clamp(134px, 110px + 4vw, 175.5px);
     }
-  }
-  img:hover {
-    animation: pulse 1s linear infinite;
   }
 }
 
@@ -150,10 +180,10 @@ section.info {
     flex-grow: 4;
   }
   .info__text-container {
-    @include text-container;
     justify-content: center;
     flex-grow: 5;
     padding: 0 2em;
+    @include text-container;
     @media (max-width: $layout-breakpoint-medium) {
       padding: 3em 2em 0 2em;
     }
@@ -166,7 +196,7 @@ section.info {
 
 section.our-story {
   padding: 7em 0;
-  background-color: #fbf8e9;
+  background-color: $our-story-bg-color;
   .our-story__text-container,
   .our-story__image-container {
     padding-left: 1em;
@@ -176,9 +206,9 @@ section.our-story {
     @include content-container($large-content-width, column);
   }
   .our-story__text-container {
-    @include text-container;
     justify-content: center;
     padding-right: 5em;
+    @include text-container;
   }
   .our-story__image-container img {
     @include image-container-img(570px);
@@ -190,7 +220,7 @@ section.our-story {
 
 section.stay-in-touch {
   padding: 5em 0 8em 0;
-  background-color: #f7efb4;
+  background-color: $stay-in-touch-bg-color;
   .stay-in-touch__text-container,
   .stay-in-touch__image-container {
     padding-left: 1em;
@@ -203,12 +233,12 @@ section.stay-in-touch {
     width: clamp(200px, 150px + 10vw, 307px);
   }
   .stay-in-touch__text-container {
-    @include text-container;
     justify-content: end;
     padding-left: 5em;
+    @include text-container;
   }
   input {
-    font-family: Montserrat;
+    font-family: $primary-font;
     color: #333;
     font-size: 16px;
     font-weight: 500;
@@ -220,14 +250,16 @@ section.stay-in-touch {
     margin: 0 2em 2em 0;
   }
   button {
-    font-family: Montserrat;
+    @include button-pulse;
+    cursor: pointer;
+    font-family: $primary-font;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    background-color: $black-rich;
+    background-color: $footer-bg-color;
     width: 133px;
     height: 48px;
-    border: 1px solid $black-rich;
+    border: 1px solid $footer-bg-color;
     border-radius: 24px;
   }
   @media (max-width: $layout-breakpoint-medium) {
@@ -249,7 +281,7 @@ footer.footer {
   h2 {
     color: #fff;
   }
-  background-color: $black-rich;
+  background-color: $footer-bg-color;
   .footer__info {
     display: flex;
     justify-content: space-around;
@@ -278,27 +310,4 @@ footer.footer {
   .footer__socials img {
     padding: 0 0.2em;
   }
-}
-
-/* Titles */
-
-h2 {
-  color: #1f1f1f;
-  font-size: clamp(30px, 20px + 2vw, 50px);
-  font-weight: 600;
-  line-height: 60px;
-  letter-spacing: -0.0385em;
-  margin: 0;
-
-  @media (max-width: $layout-breakpoint-medium) {
-    line-height: 33px;
-    letter-spacing: -0.0285em;
-  }
-}
-
-h4 {
-  font-size: clamp(14px, 10px + 1vw, 18px);
-  font-weight: 600;
-  line-height: 26px;
-  letter-spacing: -0.5px;
 }
