@@ -6,6 +6,18 @@ body {
 }
 
 /* Mixins */
+/* Play Store App store buttons */
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.03, 1.03);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 .store-buttons {
   display: flex;
 }
@@ -19,15 +31,18 @@ body {
     padding-top: 1em;
   }
 }
-
-a {
+.store-buttons a {
   border: 0;
   margin: 1em;
 }
-a img {
+.store-buttons a img {
   width: clamp(134px, 110px + 4vw, 175.5px);
 }
+.store-buttons img:hover {
+  animation: pulse 1s linear infinite;
+}
 
+/* Sections */
 header.hero {
   padding-top: 2em;
   background: linear-gradient(rgb(251, 248, 233) 0%, rgb(251, 248, 233) 80%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%);
@@ -217,6 +232,11 @@ section.stay-in-touch {
   padding: 5em 0 8em 0;
   background-color: #f7efb4;
 }
+section.stay-in-touch .stay-in-touch__text-container,
+section.stay-in-touch .stay-in-touch__image-container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 section.stay-in-touch .stay-in-touch__content-container {
   display: flex;
   max-width: 900px;
@@ -227,6 +247,9 @@ section.stay-in-touch .stay-in-touch__content-container {
     flex-direction: column-reverse;
     max-width: 480px;
   }
+}
+section.stay-in-touch .stay-in-touch__image-container img {
+  width: clamp(200px, 150px + 10vw, 307px);
 }
 section.stay-in-touch .stay-in-touch__text-container {
   display: flex;
@@ -323,6 +346,7 @@ footer.footer .footer__socials img {
   padding: 0 0.2em;
 }
 
+/* Titles */
 h2 {
   color: #1f1f1f;
   font-size: clamp(30px, 20px + 2vw, 50px);

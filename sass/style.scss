@@ -55,6 +55,20 @@ body {
   }
 }
 
+/* Play Store App store buttons */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.03, 1.03);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 .store-buttons {
   display: flex;
 
@@ -64,16 +78,21 @@ body {
   @media (min-width: $layout-breakpoint-medium) {
     padding-top: 1em;
   }
-}
 
-a {
-  border: 0;
-  margin: 1em;
+  a {
+    border: 0;
+    margin: 1em;
 
-  img {
-    width: clamp(134px, 110px + 4vw, 175.5px);
+    img {
+      width: clamp(134px, 110px + 4vw, 175.5px);
+    }
+  }
+  img:hover {
+    animation: pulse 1s linear infinite;
   }
 }
+
+/* Sections */
 
 header.hero {
   padding-top: 2em;
@@ -172,8 +191,16 @@ section.our-story {
 section.stay-in-touch {
   padding: 5em 0 8em 0;
   background-color: #f7efb4;
+  .stay-in-touch__text-container,
+  .stay-in-touch__image-container {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
   .stay-in-touch__content-container {
     @include content-container($narrow-content-width, column-reverse);
+  }
+  .stay-in-touch__image-container img {
+    width: clamp(200px, 150px + 10vw, 307px);
   }
   .stay-in-touch__text-container {
     @include text-container;
@@ -252,6 +279,8 @@ footer.footer {
     padding: 0 0.2em;
   }
 }
+
+/* Titles */
 
 h2 {
   color: #1f1f1f;
