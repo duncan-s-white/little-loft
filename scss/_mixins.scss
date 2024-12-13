@@ -1,0 +1,50 @@
+@use 'animations' as *;
+@use 'variables' as *;
+
+/* Mixins */
+
+@mixin content-container($max-width, $flex-direction) {
+    display: flex;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    @media (max-width: $layout-breakpoint-medium) {
+        flex-direction: $flex-direction;
+        max-width: 480px;
+    }
+}
+
+@mixin text-container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $layout-breakpoint-medium) {
+        text-align: center;
+        padding: 2em;
+        padding-bottom: 1em;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 22px;
+        font-size: clamp(12px, 8px + 1vw, 16px);
+    }
+}
+
+@mixin image-container-img($max-width) {
+    @media (max-width: $layout-breakpoint-large) {
+        width: clamp(320px, 220px + 20vw, $max-width);
+    }
+
+    @media (max-width: $layout-breakpoint-medium) {
+        width: clamp(280px, 200px + 15vw, $max-width);
+        display: block;
+        margin: auto;
+    }
+}
+
+@mixin button-pulse {
+    &:hover {
+        animation: pulse 1s linear infinite;
+    }
+}

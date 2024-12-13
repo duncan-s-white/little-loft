@@ -1,0 +1,78 @@
+/* Slide animation Keyframes */
+
+@keyframes slide {
+
+    0% {
+        transform: translateX(1500px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+
+    0% {
+        transform: translateX(-1500px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* info section animation Keyframes */
+
+@keyframes animate-info-section {
+
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+/* Button Wiggle animation Keyframes */
+
+@keyframes wiggle {
+
+    0%,
+    40% {
+        transform: rotateZ(0);
+    }
+
+    42% {
+        transform: rotateZ(-10deg);
+    }
+
+    44% {
+        transform: rotateZ(6deg);
+    }
+
+    46% {
+        transform: rotateZ(-6deg);
+    }
+
+    48% {
+        transform: rotateZ(4deg);
+    }
+
+    50% {
+        transform: rotateZ(-3deg);
+    }
+
+    52%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
