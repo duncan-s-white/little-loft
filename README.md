@@ -1,6 +1,7 @@
 # Marie Curie Frontend 
 
 View the [hosted exercise](https://duncan-s-white.github.io/little-loft/).
+
 View the [hosted exercise - with animations](https://little-loft.duncanwhite.co.uk).
 
 ## Development
@@ -19,4 +20,6 @@ Alternatively you can use `gulp buildStyles` to build them on request.
 
 ## Animation Enhancements
 
-I have added animations to the project and improved the file structure of the scss files using partials. This code on a branch called `animated`.
+I have added animations to the project and improved the file structure of the scss files using partials. 
+
+This code on a branch called `animated`.
