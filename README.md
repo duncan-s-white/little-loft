@@ -2,8 +2,6 @@
 
 View the [hosted exercise](https://duncan-s-white.github.io/little-loft/).
 
-View the [hosted exercise - with animations](https://little-loft.duncanwhite.co.uk).
-
 ## Development
 
 Clone the project, and open the `index.html` file in your browser of choice.
@@ -18,8 +16,6 @@ To watch the scss files in the `.scss/` directory and compile them to the `.css/
 
 Alternatively you can use `gulp buildStyles` to build them on request.
 
-## Animation Enhancements
+## Static Version
 
-I have added animations to the project and improved the file structure of the scss files using partials. 
-
-This code on a branch called `animated`.
+[View a static version](https://little-loft.duncanwhite.co.uk) of the exercise with minimal animation.
